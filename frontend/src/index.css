@@ -1,0 +1,457 @@
+/* ========================================
+   PLACEMENTHUB
+   GLOBAL DESIGN SYSTEM
+   ======================================== */
+
+:root {
+  /* ---------- Typography ---------- */
+
+  font-family:
+          Inter,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* ---------- Brand Colors ---------- */
+
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-light: #eff6ff;
+  --primary-soft: #dbeafe;
+  --primary-border: #bfdbfe;
+
+  /* ---------- Text ---------- */
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+
+  /* ---------- Backgrounds ---------- */
+
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --surface-hover: #f8fafc;
+  --surface-muted: #f1f5f9;
+
+  /* ---------- Borders ---------- */
+
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --border-dark: #cbd5e1;
+
+  /* ---------- Status Colors ---------- */
+
+  --success: #16a34a;
+  --success-light: #f0fdf4;
+  --success-border: #bbf7d0;
+
+  --warning: #d97706;
+  --warning-light: #fffbeb;
+  --warning-border: #fde68a;
+
+  --danger: #dc2626;
+  --danger-light: #fef2f2;
+  --danger-border: #fecaca;
+
+  --info: #0284c7;
+  --info-light: #f0f9ff;
+  --info-border: #bae6fd;
+
+  /* ---------- Shadows ---------- */
+
+  --shadow-xs: 0 1px 3px rgba(15, 23, 42, 0.04);
+
+  --shadow-sm:
+          0 2px 8px rgba(15, 23, 42, 0.05);
+
+  --shadow-md:
+          0 8px 24px rgba(15, 23, 42, 0.07);
+
+  --shadow-lg:
+          0 18px 45px rgba(15, 23, 42, 0.10);
+
+  --shadow-xl:
+          0 25px 60px rgba(15, 23, 42, 0.12);
+
+  /* ---------- Border Radius ---------- */
+
+  --radius-xs: 5px;
+  --radius-sm: 7px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-2xl: 24px;
+
+  /* ---------- Layout ---------- */
+
+  --container-width: 1200px;
+  --page-padding: 24px;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: var(--text-primary);
+  background: var(--background);
+}
+
+/* ========================================
+   GLOBAL RESET
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  margin: 0;
+
+  background: var(--background);
+  color: var(--text-primary);
+
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+
+  font-family:
+          Inter,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 650;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+small {
+  font-size: 13px;
+}
+
+/* ========================================
+   LINKS
+   ======================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+/* ========================================
+   IMAGES
+   ======================================== */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ========================================
+   FORM ELEMENTS
+   ======================================== */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+
+  padding: 11px 13px;
+
+  background: var(--surface);
+  color: var(--text-primary);
+
+  outline: none;
+
+  transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease,
+          background-color 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-light);
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #94a3b8;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+          0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background: var(--surface-muted);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select {
+  cursor: pointer;
+}
+
+label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--text-primary);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+button {
+  border: none;
+  cursor: pointer;
+
+  transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease,
+          color 0.2s ease,
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* ========================================
+   ACCESSIBILITY / FOCUS
+   ======================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.3);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   TEXT SELECTION
+   ======================================== */
+
+::selection {
+  background: var(--primary-soft);
+  color: #1e3a8a;
+}
+
+/* ========================================
+   SCROLLBAR
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #cbd5e1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ========================================
+   RESPONSIVE TYPOGRAPHY
+   ======================================== */
+
+@media (max-width: 900px) {
+  :root {
+    --page-padding: 20px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 15px;
+    --page-padding: 18px;
+  }
+
+  h1 {
+    font-size: 34px;
+    letter-spacing: -0.7px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --page-padding: 14px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 10px 12px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

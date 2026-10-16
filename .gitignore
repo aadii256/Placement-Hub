@@ -1,0 +1,31 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Spring Boot / Maven
+target/
+*.class
+
+# Gradle
+.gradle/
+build/
+
+# Frontend
+node_modules/
+dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Local configuration
+application-local.properties
+application-local.yml
+
+# Operating system
+.DS_Store
+Thumbs.db

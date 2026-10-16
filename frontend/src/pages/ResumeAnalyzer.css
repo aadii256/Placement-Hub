@@ -1,0 +1,372 @@
+.resume-analyzer {
+    margin-top: 28px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #dbe7f5;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.08);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.resume-analyzer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5edf7;
+}
+
+.resume-ai-badge {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #e8f1ff;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.resume-analyzer-header h2 {
+    margin: 0 0 8px;
+    color: #172554;
+    font-size: 24px;
+    font-weight: 750;
+}
+
+.resume-analyzer-header p {
+    margin: 0;
+    max-width: 650px;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   ANALYZE BUTTON
+========================= */
+
+.analyze-resume-button {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.analyze-resume-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.analyze-resume-button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.resume-analysis-error {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.resume-analysis-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    text-align: center;
+}
+
+.resume-spinner {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 16px;
+    border: 4px solid #dbeafe;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: resumeSpin 0.8s linear infinite;
+}
+
+.resume-analysis-loading p {
+    margin: 0 0 5px;
+    color: #1e3a8a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.resume-analysis-loading span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+@keyframes resumeSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   RESULTS
+========================= */
+
+.resume-analysis-results {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+/* =========================
+   ATS SCORE
+========================= */
+
+.ats-score-card {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+    background: #f8fbff;
+}
+
+.ats-score-circle {
+    flex-shrink: 0;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 8px solid #bfdbfe;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #1d4ed8;
+}
+
+.ats-score-circle span {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.ats-score-circle small {
+    margin-top: 3px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ats-score-content h3 {
+    margin: 0 0 8px;
+    color: #172554;
+    font-size: 20px;
+}
+
+.ats-score-content p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   ANALYSIS CARDS
+========================= */
+
+.analysis-card {
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.analysis-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.analysis-card-header h3 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 16px;
+    font-weight: 750;
+}
+
+.analysis-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #15803d;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.analysis-icon.warning {
+    background: #fef3c7;
+    color: #b45309;
+}
+
+/* =========================
+   SKILL TAGS
+========================= */
+
+.analysis-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 650;
+    border: 1px solid #dbeafe;
+}
+
+/* =========================
+   LISTS
+========================= */
+
+.analysis-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #475569;
+}
+
+.analysis-list li {
+    margin-bottom: 9px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.analysis-list li:last-child {
+    margin-bottom: 0;
+}
+
+.strengths-list li::marker {
+    color: #16a34a;
+}
+
+.suggestions-list li::marker {
+    color: #2563eb;
+}
+
+/* =========================
+   SUGGESTIONS
+========================= */
+
+.suggestions-card {
+    grid-column: 1 / -1;
+    background: #f8fbff;
+    border-color: #dbeafe;
+}
+
+.suggestions-card .analysis-icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-analysis {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .resume-analyzer {
+        padding: 20px;
+    }
+
+    .resume-analyzer-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .analyze-resume-button {
+        width: 100%;
+    }
+
+    .resume-analysis-results {
+        grid-template-columns: 1fr;
+    }
+
+    .ats-score-card {
+        grid-column: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .suggestions-card {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .resume-analyzer {
+        padding: 16px;
+        border-radius: 14px;
+    }
+
+    .resume-analyzer-header h2 {
+        font-size: 21px;
+    }
+
+    .ats-score-card {
+        padding: 18px;
+    }
+
+    .analysis-card {
+        padding: 16px;
+    }
+}
